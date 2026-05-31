@@ -232,58 +232,58 @@
         <div class="image-gallery">
             <!-- Item 1 -->
             <div class="gallery-item">
-                <img src="image/yellow.jpg.png alt="Dress 1">
+                <img src="image/yellow.jpg.jpg "alt="Dress 1">
                 <div class="item-title">Luxury Gown 1</div>
-                <div class="item-price">₦25,000</div>
+                <div class="item-price">₦8,000</div>
                 <button class="btn" onclick="addToCart('Luxury Gown 1', 25000)">Add to Cart</button>
             </div>
             <!-- Item 2 -->
             <div class="gallery-item">
-                <img src="https://placeholder.com" alt="Dress 2">
+                <img src="image/desinger.jpg.jpg" alt="Dress 2">
                 <div class="item-title">Luxury Gown 2</div>
-                <div class="item-price">₦30,000</div>
+                <div class="item-price">₦8,000</div>
                 <button class="btn" onclick="addToCart('Luxury Gown 2', 30000)">Add to Cart</button>
             </div>
             <!-- Item 3 -->
             <div class="gallery-item">
-                <img src="https://placeholder.com" alt="Dress 3">
+                <img src="image/white.jpg.jpg" alt="Dress 3">
                 <div class="item-title">Luxury Gown 3</div>
-                <div class="item-price">₦28,000</div>
+                <div class="item-price">₦8,000</div>
                 <button class="btn" onclick="addToCart('Luxury Gown 3', 28000)">Add to Cart</button>
             </div>
             <!-- Item 4 -->
             <div class="gallery-item">
-                <img src="https://placeholder.com" alt="Dress 4">
+                <img src="image/skirt" alt="Dress 4">
                 <div class="item-title">Luxury Gown 4</div>
-                <div class="item-price">₦35,000</div>
+                <div class="item-price">₦9,000</div>
                 <button class="btn" onclick="addToCart('Luxury Gown 4', 35000)">Add to Cart</button>
             </div>
             <!-- Item 5 -->
             <div class="gallery-item">
-                <img src="https://placeholder.com" alt="Dress 5">
+                <img src="image/pink.jpg.jpg" alt="Dress 5">
                 <div class="item-title">Luxury Gown 5</div>
-                <div class="item-price">₦22,000</div>
+                <div class="item-price">₦8,000</div>
                 <button class="btn" onclick="addToCart('Luxury Gown 5', 22000)">Add to Cart</button>
             </div>
             <!-- Item 6 -->
             <div class="gallery-item">
-                <img src="https://placeholder.com" alt="Dress 6">
+                <img src="image/work.jpg.jpg" alt="Dress 6">
                 <div class="item-title">Luxury Gown 6</div>
-                <div class="item-price">₦40,000</div>
+                <div class="item-price">₦8,000</div>
                 <button class="btn" onclick="addToCart('Luxury Gown 6', 40000)">Add to Cart</button>
             </div>
             <!-- Item 7 -->
             <div class="gallery-item">
-                <img src="https://placeholder.com" alt="Dress 7">
+                <img src="image/office.jpg.jpg" alt="Dress 7">
                 <div class="item-title">Luxury Gown 7</div>
-                <div class="item-price">₦27,500</div>
+                <div class="item-price">₦8000</div>
                 <button class="btn" onclick="addToCart('Luxury Gown 7', 27500)">Add to Cart</button>
             </div>
             <!-- Item 8 -->
             <div class="gallery-item">
-                <img src="https://placeholder.com" alt="Dress 8">
+                <img src="image/work.jpg.jpg" alt="Dress 8">
                 <div class="item-title">Luxury Gown 8</div>
-                <div class="item-price">₦32,000</div>
+                <div class="item-price">₦8,000</div>
                 <button class="btn" onclick="addToCart('Luxury Gown 8', 32000)">Add to Cart</button>
             </div>
         </div>
@@ -294,7 +294,7 @@
             <div class="video-container">
                 <!-- Replace 'sample-video.mp4' with your actual video link later -->
                 <video controls poster="https://placeholder.com">
-                    <source src="sample-video.mp4" type="video/mp4">
+                    <source src="image/showcase.mp4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
