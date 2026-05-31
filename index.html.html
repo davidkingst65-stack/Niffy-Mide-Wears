@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIFFY MIDE</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Black Header */
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Gold Dress Logo & Name Area */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .dress-logo {
+            font-size: 50px;
+            color: #D4AF37; /* Metallic Gold */
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            text-align: center;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* 8-Image Grid Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fafafa;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-title {
+            font-weight: bold;
+            margin: 15px 0 5px 0;
+        }
+
+        .item-price {
+            color: #D4AF37;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* 1-Video Section */
+        .video-section {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: #D4AF37;
+            color: #000000;
+        }
+
+        /* Checkout Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px 0;
+        }
+
+        .payment-option {
+            border: 2px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            width: 40%;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            transition: border-color 0.3s;
+        }
+
+        .payment-option:hover {
+            border-color: #D4AF37;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Black Footer */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Black Header with Gold Dress Logo -->
+    <header>
+        <div class="logo-container">
+            <!-- Unicode Dress character used as a visual placeholder logo -->
+            <div class="dress-logo">👗</div>
+            <h1>NIFFY MIDE</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- 8 Places for Images Gallery -->
+        <h2>Our Collection</h2>
+        <div class="image-gallery">
+            <!-- Item 1 -->
+            <div class="gallery-item">
+                <img src="https://placeholder.com" alt="Dress 1">
+                <div class="item-title">Luxury Gown 1</div>
+                <div class="item-price">₦25,000</div>
+                <button class="btn" onclick="addToCart('Luxury Gown 1', 25000)">Add to Cart</button>
+            </div>
+            <!-- Item 2 -->
+            <div class="gallery-item">
+                <img src="https://placeholder.com" alt="Dress 2">
+                <div class="item-title">Luxury Gown 2</div>
+                <div class="item-price">₦30,000</div>
+                <button class="btn" onclick="addToCart('Luxury Gown 2', 30000)">Add to Cart</button>
+            </div>
+            <!-- Item 3 -->
+            <div class="gallery-item">
+                <img src="https://placeholder.com" alt="Dress 3">
+                <div class="item-title">Luxury Gown 3</div>
+                <div class="item-price">₦28,000</div>
+                <button class="btn" onclick="addToCart('Luxury Gown 3', 28000)">Add to Cart</button>
+            </div>
+            <!-- Item 4 -->
+            <div class="gallery-item">
+                <img src="https://placeholder.com" alt="Dress 4">
+                <div class="item-title">Luxury Gown 4</div>
+                <div class="item-price">₦35,000</div>
+                <button class="btn" onclick="addToCart('Luxury Gown 4', 35000)">Add to Cart</button>
+            </div>
+            <!-- Item 5 -->
+            <div class="gallery-item">
+                <img src="https://placeholder.com" alt="Dress 5">
+                <div class="item-title">Luxury Gown 5</div>
+                <div class="item-price">₦22,000</div>
+                <button class="btn" onclick="addToCart('Luxury Gown 5', 22000)">Add to Cart</button>
+            </div>
+            <!-- Item 6 -->
+            <div class="gallery-item">
+                <img src="https://placeholder.com" alt="Dress 6">
+                <div class="item-title">Luxury Gown 6</div>
+                <div class="item-price">₦40,000</div>
+                <button class="btn" onclick="addToCart('Luxury Gown 6', 40000)">Add to Cart</button>
+            </div>
+            <!-- Item 7 -->
+            <div class="gallery-item">
+                <img src="https://placeholder.com" alt="Dress 7">
+                <div class="item-title">Luxury Gown 7</div>
+                <div class="item-price">₦27,500</div>
+                <button class="btn" onclick="addToCart('Luxury Gown 7', 27500)">Add to Cart</button>
+            </div>
+            <!-- Item 8 -->
+            <div class="gallery-item">
+                <img src="https://placeholder.com" alt="Dress 8">
+                <div class="item-title">Luxury Gown 8</div>
+                <div class="item-price">₦32,000</div>
+                <button class="btn" onclick="addToCart('Luxury Gown 8', 32000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- 1 Place for Video Section -->
+        <h2>Featured Video</h2>
+        <div class="video-section">
+            <div class="video-container">
+                <!-- Replace 'sample-video.mp4' with your actual video link later -->
+                <video controls poster="https://placeholder.com">
+                    <source src="sample-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Order Button section at the bottom for quick checkout -->
+        <div style="text-align: center; margin: 40px 0;">
+            <button class="btn" style="font-size: 1.5rem; padding: 15px 40px;" onclick="openCheckout()">ORDER NOW</button>
+        </div>
+    </main>
+
+    <!-- Checkout Modal / Payment Window -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCheckout()">&times;</span>
+            <h3 style="text-align: center; margin-top: 0;">Complete Your Order</h3>
+            
+            <div id="cartSummary" style="margin-bottom: 15px; font-weight: bold; text-align: center;">
+                Cart is empty. Select an item or order directly!
+            </div>
+
+            <!-- Customer Details Form -->
