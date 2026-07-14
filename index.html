@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIFFY MIDE WEARS | Premium Fashion</title>
+  <style>
+    /* Global Reset & Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    /* Black Header with Dress Logo */
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      font-size: 28px;
+      color: #ff4d94; /* Elegant pink accent for the dress icon */
+    }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ff4d94;
+    }
+
+    /* Core Layout Sections */
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2.section-title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    h2.section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #ff4d94;
+      margin: 8px auto 0;
+    }
+
+    /* Sliding 4x2 Grid Gallery Layout */
+    .image-gallery {
+      width: 100%;
+      height: 940px; /* Locked window height to securely contain exactly two rows of cards */
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 60px;
+      border-radius: 12px;
+    }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    /* E-commerce Product Cards */
+    .gallery-item {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 440px; /* Balanced card structure height */
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+    .item-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 12px 10px 4px;
+    }
+    .item-price {
+      color: #ff4d94;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    .btn {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 85%;
+      margin: 0 auto;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #ff4d94;
+    }
+
+    /* Video Concept Section */
+    .video-section {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .video-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+    }
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Functional Dynamic Shopping Cart Drawer */
+    .cart-section {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      margin-top: 40px;
+    }
+    .cart-ui-box {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 20px 0;
+      margin: 20px 0;
+      min-height: 60px;
+    }
+    .cart-empty-msg {
+      color: #888;
+      font-style: italic;
+    }
+    .cart-row-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 16px;
+    }
+    .cart-total-display {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: right;
+      margin-bottom: 25px;
+    }
+    .order-btn {
+      background-color: #25D366; /* Official WhatsApp Brand Green */
+      color: white;
+      border: none;
+      padding: 14px 35px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      margin: 0 0 0 auto;
+      transition: background-color 0.3s;
+    }
+    .order-btn:hover {
+      background-color: #128C7E;
+    }
+
+    /* Footer Details */
+    footer {
+      background-color: #111;
+      color: #888;
+      text-align: center;
+      padding: 25px;
+      margin-top: 80px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Dress Icon -->
+  <header>
+    <div class="logo-container">
+      <!-- UTF-8 Elegantly Rendered Dress Icon Alternative Symbol -->
+      <span class="logo-icon">&#128087;</span>
+      <span class="logo-text">NIFFY MIDE WEARS</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#collection">Collection</a>
+      <a href="#video">Showcase</a>
+      <a href="#cart">My Order Box</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Collection Block Header -->
+    <section id="collection">
+      <h2 class="section-title">Our Collection</h2>
+      
+      <!-- Auto Sliding 4x2 Grid Area -->
+      <div class="image-gallery">
+        <div class="gallery-container" id="sliderGrid">
+          
+          <!-- Upper Row (First 4 items) -->
+          <div class="gallery-item">
+            <img src="bubu.jpg" alt="Bubu Dress">
+            <div class="item-title">Elegant Bubu Dress</div>
+            <div class="item-price">₦8,000</div>
+            <button class="btn" onclick="addToOrderCart('Elegant Bubu Dress')">Add to Cart</button>
+          </div>
+          <div class="gallery-item">
+            <img src="gown.jpg" alt="Luxury Gown">
+            <div class="item-title">Luxury Gown Premium</div>
+            <div class="item-price">₦8,000</div>
+            <button class="btn" onclick="addToOrderCart('Luxury Gown Premium')">Add to Cart</button>
+          </div>
+          <div class="gallery-item">
+            <img src="skirt.jpg" alt="Designer Skirt">
+            <div class="item-title">Designer Wrap Skirt</div>
+            <div class="item-price">₦8,000</div>
+            <button class="btn" onclick="addToOrderCart('Designer Wrap Skirt')">Add to Cart</button>
+          </div>
+          <div class="gallery-item">
+            <img src="pink.jpg" alt="Pink Silk Dress">
+            <div class="item-title">Pink Silk Cocktail Dress</div>
+            <div class="item-price">₦8,000</div>
+            <button class="btn" onclick="addToOrderCart('Pink Silk Cocktail Dress')">Add to Cart</button>
+          </div>
+
+          <!-- Lower Row (Next 4 items) -->
+          <div class="gallery-item">
+            <img src="office.jpg" alt="Office Corporate Wear">
+            <div class="item-title">Corporate Office Wear</div>
+            <div class="item-price">₦8,000</div>
+            <button class="btn" onclick="addToOrderCart('Corporate Office Wear')">Add to Cart</button>
+          </div>
+          <div class="gallery-item">
+            <img src="green.jpg" alt="Emerald Gown">
+            <div class="item-title">Emerald Dinner Gown</div>
+            <div class="item-price">₦8,000</div>
+            <button class="btn" onclick="addToOrderCart('Emerald Dinner Gown')">Add to Cart</button>
+          </div>
+          <div class="gallery-item">
+            <img src="work.jpg" alt="Casual Office Jumpsuit">
+            <div class="item-title">Casual Workspace Jumpsuit</div>
+            <div class="item-price">₦8,000</div>
+            <button class="btn" onclick="addToOrderCart('Casual Workspace Jumpsuit')">Add to Cart</button>
+          </div>
+          <div class="gallery-item">
+            <img src="yellow.jpg" alt="Summer Sunshine Dress">
+            <div class="item-title">Summer Sunshine Dress</div>
+            <div class="item-price">₦8,000</div>
+            <button class="btn" onclick="addToOrderCart('Summer Sunshine Dress')">Add to Cart</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Runway Video Showcase Block -->
+    <section id="video" class="video-section">
+      <h2 class="section-title">Brand Video Showcase</h2>
+      <div class="video-wrapper">
+        <video controls poster="office.jpg">
+          <source src="showcase.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- Real-time Mathematical Calculation Checkout Module -->
+    <section id="cart" class="cart-section">
+      <h2 class="section-title">Your Shopping Basket</h2>
+      <div class="cart-ui-box" id="cartContentList">
+        <p class="cart-empty-msg">Your shopping basket is currently empty. Click "Add to Cart" above to start selecting dresses!</p>
+      </div>
+      <div class="cart-total-display">
+        Total Order Amount: ₦<span id="cartCurrentTotal">0</span>
+      </div>
+      <button class="order-btn" onclick="dispatchWhatsAppOrder()">Confirm & Order via WhatsApp</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 NIFFY MIDE WEARS. Premium Nigerian Fashion Statement Hub.</p>
+  </footer>
+
+  <!-- Script logic processing automated slideshow shifts and real-time checkout updates -->
+  <script>
+    // 1. Grid Multi-Row Alternating Slide Controller
+    const targetGrid = document.getElementById('sliderGrid');
